@@ -192,8 +192,8 @@ Terminal.defaultProps = {
     onClose: noop,
     onExpand: noop,
     onMinimize: noop,
-    prefix: 'hacker@default',
+    prefix: 'visitor@1994arg',
     structure: {},
     styles: {},
-    theme: Terminal.Themes.LIGHT,
+    theme: Terminal.Themes.DARK,
 };

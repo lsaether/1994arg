@@ -10,11 +10,34 @@ const extensions = {
             };
         },
     },
+    about: {
+        exec: ({ structure, history, cwd }) => {
+            return { structure, cwd,
+                history: history.concat({ value: '1994 Alternate Reality Game is my hub on the virtual net. Here you can find any information about me that you might want.\n If you are not familiar with the linux command line you can type `help` to display a list of basic commands. You can also type `bio` to come along on a more curated experience. If you know what you are doing, feel free to explore the file system.'})}
+        }
+    },
+    bio: {
+        exec: ({ structure, history, cwd }) => {
+            return { structure, cwd, 
+                history: history.concat({ value: 'Logan Saether is a programmer from Phoenix, Arizona. He writes English, JavaScript, Rust, Solidity and develops for the full stack. He is interested in blockchains and cryptocurrencies. Type `more` to keep going.' })}
+        }
+    },
+    more: {
+        exec: ({ structure, history, cwd }) => { 
+            return { structure, cwd,
+                history: history.concat({ value: 'Type `blog` to be redirected to his writings. Type `github` to be redirected to his code.' })}
+        }
+    },
+    github: {
+        exec: ({ strucutre, history, cwd }) => {
+            window.open('https://github.com/lsaether/')
+        }
+    }
 };
 
 const history = [
-    { value: 'Hackers will be high-fived. ( ‘-’)人(ﾟ_ﾟ )' },
-    { value: 'Type `help` to begin' },
+    { value: 'Welcome to the website of Logan Saether.' },
+    { value: 'Type `about` and enter to begin' },
 ];
 
 const structure = {
